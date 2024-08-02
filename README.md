@@ -48,6 +48,10 @@ To run the Streamlit app for music genre classification, follow these steps:
 
 Below are some screenshots of the Streamlit app in action:
 
+
+https://github.com/user-attachments/assets/fb74795e-75ae-4095-865c-221a3c2df239
+
+
 ![Screenshot 1](https://github.com/user-attachments/assets/e6800fb7-e16e-472b-b6a4-f6819efbe43a)
 ![Screenshot 2](https://github.com/user-attachments/assets/fb0c0b69-ab4a-45c5-94cf-2beaf8aa4b80)
 
