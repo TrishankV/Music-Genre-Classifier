@@ -4,3 +4,4 @@ resampy
 tensorflow_hub
 soundfile
 tf-slim
+pydub
