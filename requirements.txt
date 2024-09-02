@@ -1,3 +1,6 @@
 librosa
 tensorflow
-it+https://github.com/tensorflow/models.git#egg=vggish
+resampy
+tensorflow_hub
+soundfile
+tf-slim

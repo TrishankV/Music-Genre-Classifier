@@ -5,6 +5,10 @@ import librosa
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import load_model
+import sys
+import sys
+sys.path.append("/workspaces/Music-Genre-Classifier/models/research/audioset/vggish")
+import vggish_input
 import vggish_input
 import vggish_params
 import vggish_slim
@@ -13,7 +17,7 @@ import pydub
 from pydub import AudioSegment
 
 # Load the trained model
-model = load_model('/content/nmodel86.h5')  # Replace with the actual path to your model
+model = load_model('/workspaces/Music-Genre-Classifier/nmodel86.h5')  # Replace with the actual path to your model
 
 # Define the genre labels
 genre_labels = ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
@@ -22,7 +26,7 @@ genre_labels = ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'met
 def extract_embeddings(audio_file):
   with tf.Graph().as_default(), tf.compat.v1.Session() as sess:
     vggish_slim.define_vggish_slim(training=False)
-    vggish_slim.load_vggish_slim_checkpoint(sess, '/content/vggish_model.ckpt')  # Replace with the actual path to the VGGish checkpoint
+    vggish_slim.load_vggish_slim_checkpoint(sess, '/workspaces/Music-Genre-Classifier/models/research/audioset/vggish/vggish_model.ckpt')  # Replace with the actual path to the VGGish checkpoint
     features_tensor = sess.graph.get_tensor_by_name(vggish_params.INPUT_TENSOR_NAME)
     embedding_tensor = sess.graph.get_tensor_by_name(vggish_params.OUTPUT_TENSOR_NAME)
 
