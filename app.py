@@ -10,7 +10,7 @@ import vggish_params
 import vggish_slim
 import soundfile as sf
 
-# Add your VGGish module 
+# Add your GGish module 
 sys.path.append("/workspaces/Music-Genre-Classifier/models/research/audioset/vggish")
 
 # Load the trained model
