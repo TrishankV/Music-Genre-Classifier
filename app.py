@@ -26,7 +26,7 @@ genre_labels = ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'met
 def extract_embeddings(audio_file):
   with tf.Graph().as_default(), tf.compat.v1.Session() as sess:
     vggish_slim.define_vggish_slim(training=False)
-    vggish_slim.load_vggish_slim_checkpoint(sess, '/workspaces/Music-Genre-Classifier/models/research/audioset/vggish/vggish_model.ckpt')  # Replace with the actual path to the VGGish checkpoint
+    vggish_slim.load_vggish_slim_checkpoint(sess, '')  # Replace with the actual path to the VGGish checkpoint
     features_tensor = sess.graph.get_tensor_by_name(vggish_params.INPUT_TENSOR_NAME)
     embedding_tensor = sess.graph.get_tensor_by_name(vggish_params.OUTPUT_TENSOR_NAME)
 
