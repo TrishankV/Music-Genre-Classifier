@@ -5,13 +5,14 @@ from tensorflow.keras.models import load_model
 import sys
 import pydub
 from pydub import AudioSegment
+
+sys.path.append("/workspaces/Music-Genre-Classifier/models/research/audioset/vggish")
 import vggish_input
 import vggish_params
 import vggish_slim
 import soundfile as sf
 
 # Add your GGish module 
-sys.path.append("/workspaces/Music-Genre-Classifier/models/research/audioset/vggish")
 
 # Load the trained model
 model = load_model('/workspaces/Music-Genre-Classifier/nmodel86.h5')  # Replace with the actual path to your model
